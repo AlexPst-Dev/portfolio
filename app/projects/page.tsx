@@ -24,28 +24,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-screen bg-black text-white max-w-7xl mx-auto">
-      <div className="mb-8">
-        <Link
-          href="/"
-          className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-6"
-        >
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          Back to Home
-        </Link>
+    <section className="min-h-screen bg-black text-white">
+      <div className="mb-4">
         <h1 className="text-4xl font-bold mb-2">My Projects</h1>
         <p className="text-gray-400">
           A collection of my recent work and side projects
