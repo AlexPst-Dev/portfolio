@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center">
+    <section className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center">
       <div id="leftPart" className="w-full md:w-[54%]">
         <div id="titles">
           <h1>Alexandre PROUST</h1>
           <h2>Développeur & Designer Web Freelance</h2>
-          <h3>NextJS</h3>
+          <h3>NextJS | AstroJS | Figma</h3>
         </div>
         <p className="mt-2">
           {`Développeur Front-End freelance, je conçois des sites et MVP web, du
@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="rightPart flex justify-center">
         <Image
-          src="/pp-alexandre-proust-website.jpg"
+          src="/pp-alexandre-proust-website.png"
           alt="Photo d'Alexandre"
           width={500}
           height={500}
