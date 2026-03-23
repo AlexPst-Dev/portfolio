@@ -5,9 +5,9 @@ export default function Home() {
     <section className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center">
       <div id="leftPart" className="w-full md:w-[54%]">
         <div id="titles">
-          <h1>Alexandre PROUST</h1>
+          <h1 className="leading-none">Alexandre PROUST</h1>
           <h2>Développeur & Designer Web Freelance</h2>
-          <h3>NextJS | AstroJS | Figma</h3>
+          <h3>NextJS | React Native | Figma</h3>
         </div>
         <p className="mt-2">
           {`Développeur Front-End freelance, je conçois des sites et MVP web, du

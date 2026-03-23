@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Hyperion Connect",
     description:
-      "A full-stack sporting community app for the company Hyperion. Used to connect sportsmans with coachs, medics and partners and let them planify sessions and share informations",
+      "Application mobile pour la communauté sportive de l'entreprise Hyperion. Utilisée pour connecter les sportifs avec les coachs, les médecins et les partenaires et permettre à ces derniers de planifier des sessions et de partager des informations",
     imageUrl: "/hyperion-connect-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/hyperion-connect-frontend",
     liveUrl: "https://dev.app.hyperion-connect.com",
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "TimeIt",
     description:
-      "WebApp entirely code with Antigravity IDE of Google. Used to set sporting activity timers",
+      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive",
     imageUrl: "/timeit-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/TimeIt",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Antigravity"],
@@ -26,9 +26,9 @@ export default function Projects() {
   return (
     <section className="min-h-screen bg-black text-white">
       <div className="mb-4">
-        <h1 className="text-4xl font-bold mb-2">My Projects</h1>
+        <h1 className="text-4xl font-bold mb-2">Mes projets</h1>
         <p className="text-gray-400">
-          A collection of my recent work and side projects
+          Une collection de mes projets récents et de mes projets personnels
         </p>
       </div>
 
