@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Alexandre PROUST" }],
   creator: "Alexandre PROUST",
+  other: {
+    "profile:linkedin":
+      "https://www.linkedin.com/in/alexandre-proust-48437919b/",
+    "profile:github": "https://github.com/AlexPst-Dev",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -26,20 +31,12 @@ export const metadata: Metadata = {
       "Portfolio professionnel d'Alexandre PROUST: projets web, expérience et contact.",
     images: [
       {
-        url: "/og-image.jpg", // TODO: replace with a real 1200x630 Open Graph image
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Aperçu du portfolio d'Alexandre PROUST",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@john_doe_dev", // TODO: replace with real Twitter/X handle
-    title: "Alexandre PROUST | Développeur & Designer Web Freelance",
-    description:
-      "Découvrez les projets et l'expertise d'Alexandre PROUST en développement web.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
