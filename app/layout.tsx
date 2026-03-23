@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       "Portfolio professionnel d'Alexandre PROUST: projets web, expérience et contact.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://www.portfolio.alx-pst.tech/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Aperçu du portfolio d'Alexandre PROUST",
