@@ -1,11 +1,25 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Experience",
+  description:
+    "Parcours professionnel et formations d'Alexandre PROUST, avec les technologies maitrisees en contexte projet.",
+  alternates: {
+    canonical: "/experiences",
+  },
+};
+
 export default function Experiences() {
   return (
     <div className="flex flex-col w-full gap-8 py-8 md:pt-0 md:pb-8">
-      {/** Experiences */}
-      <section className="flex flex-col">
+      <header>
         <h1>EXPERIENCES</h1>
+      </header>
+      {/** Experiences */}
+      <section aria-label="Parcours professionnel" className="flex flex-col">
+        <h2 className="sr-only">Parcours professionnel</h2>
         <div className="flex flex-col gap-4">
-          <>
+          <article>
             <div className="flex flex-col gap-2">
               <h3>Freelance — Développeur & Designer Web </h3>
               <p>02/2025 - Aujourd&apos;hui | Rennes</p>
@@ -43,8 +57,8 @@ export default function Experiences() {
                 qualité.
               </li>
             </ul>
-          </>
-          <>
+          </article>
+          <article>
             <div className="flex flex-col gap-2">
               <h3>Artefacto — Développeur Fullstack </h3>
               <p>09/2022 - 09/2024 | Rennes</p>
@@ -79,8 +93,8 @@ export default function Experiences() {
                 immersifs de l&apos;entreprise
               </li>
             </ul>
-          </>
-          <>
+          </article>
+          <article>
             <div className="flex flex-col gap-2">
               <h3>Lioncoach — Développeur Fullstack</h3>
               <p>09/2021 - 09/2022 | Rennes</p>
@@ -106,12 +120,12 @@ export default function Experiences() {
                 utilisateur globale.
               </li>
             </ul>
-          </>
+          </article>
         </div>
       </section>
       {/** Diplomes */}
       <section className="flex flex-col gap-4">
-        <h1>DIPLOMES</h1>
+        <h2>DIPLOMES</h2>
         <div className="flex flex-col gap-2">
           <h3>Mastère Développeur Fullstack — Sup De Vinci</h3>
           <p>09/2022 - 09/2024 | Rennes </p>

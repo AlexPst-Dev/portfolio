@@ -20,14 +20,16 @@ export default function ProjectCard({
   tags = [],
 }: ProjectCardProps) {
   return (
-    <div className="border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600 hover:shadow-lg hover:shadow-gray-900/50">
+    <article className="border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600 hover:shadow-lg hover:shadow-gray-900/50">
       <div className="relative h-64 w-full">
         <Image
           src={imageUrl}
-          alt={title}
+          alt={`Capture d'ecran du projet ${title}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgODAwIDQ1MCI+PHJlY3Qgd2lkdGg9IjgwMCIgaGVpZ2h0PSI0NTAiIGZpbGw9IiMyYTJhMmEiLz48L3N2Zz4="
         />
       </div>
 
@@ -54,7 +56,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-            aria-label="View on GitHub"
+            aria-label={`Voir le code du projet ${title} sur GitHub`}
           >
             <FaGithub className="w-5 h-5" />
             <span>Code</span>
@@ -66,7 +68,7 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-              aria-label="View live demo"
+              aria-label={`Voir la demo en ligne du projet ${title}`}
             >
               <FaExternalLinkAlt className="w-4 h-4" />
               <span>Live Demo</span>
@@ -74,6 +76,6 @@ export default function ProjectCard({
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }

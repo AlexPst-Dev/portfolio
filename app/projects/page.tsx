@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ProjectCard from "@/app/components/ProjectCard";
 
 // Example projects data - replace with your actual projects
@@ -21,17 +22,32 @@ const projects = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Projets",
+  description:
+    "Explorez les projets d'Alexandre PROUST: applications React Native, sites Next.js, APIs REST et integrations full-stack.",
+  alternates: {
+    canonical: "/projects",
+  },
+};
+
 export default function Projects() {
   return (
-    <section className="min-h-screen bg-black text-white py-8 md:py-0">
-      <div className="mb-4">
-        <h1 className="text-4xl font-bold mb-2">Mes projets</h1>
+    <section
+      aria-label="Liste des projets"
+      className="min-h-screen bg-black text-white py-8 md:py-0"
+    >
+      <header className="mb-4">
+        <h1 className="text-4xl font-bold mb-2">PROJETS</h1>
         <p className="text-gray-400">
           Une collection de mes projets récents et de mes projets personnels
         </p>
-      </div>
+      </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section
+        aria-label="Cartes de projets"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -43,7 +59,7 @@ export default function Projects() {
             tags={project.tags}
           />
         ))}
-      </div>
+      </section>
     </section>
   );
 }
