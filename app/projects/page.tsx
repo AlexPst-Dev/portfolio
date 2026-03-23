@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ProjectCard from "@/app/components/ProjectCard";
 
 // Example projects data - replace with your actual projects
@@ -24,7 +23,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="min-h-screen bg-black text-white">
+    <section className="min-h-screen bg-black text-white py-8 md:py-0">
       <div className="mb-4">
         <h1 className="text-4xl font-bold mb-2">Mes projets</h1>
         <p className="text-gray-400">

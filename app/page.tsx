@@ -17,14 +17,14 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="rightPart flex justify-center">
+      <div className="rightPart flex justify-center w-full md:w-[46%]">
         <Image
           src="/pp-alexandre-proust-website.png"
           alt="Photo d'Alexandre"
           width={500}
           height={500}
           priority
-          className="object-contain"
+          className="object-contain max-w-full h-auto"
         />
       </div>
     </section>

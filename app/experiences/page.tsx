@@ -1,6 +1,6 @@
 export default function Experiences() {
   return (
-    <div className="flex flex-col w-full gap-8 pb-8">
+    <div className="flex flex-col w-full gap-8 py-8 md:pt-0 md:pb-8">
       {/** Experiences */}
       <section className="flex flex-col">
         <h1>EXPERIENCES</h1>
@@ -12,19 +12,20 @@ export default function Experiences() {
             </div>
             <ul className="list-disc list-inside">
               <li>
-                Conception et développement d'une PWA mobile (React Native +
-                Expo, ExpressJS, MySQL) permettant la mise en relation de coachs
-                et professionnels du sport, avec gestion complète des
+                Conception et développement d&apos;une PWA mobile (React Native
+                + Expo, ExpressJS, MySQL) permettant la mise en relation de
+                coachs et professionnels du sport, avec gestion complète des
                 utilisateurs, événements et programmes.
               </li>
               <li>
-                Structuration d'une architecture backend scalable, permettant de
-                gérer plusieurs types d'utilisateurs et flux métier complexes.
+                Structuration d&apos;une architecture backend scalable,
+                permettant de gérer plusieurs types d&apos;utilisateurs et flux
+                métier complexes.
               </li>
               <li>
-                Réalisation d'un site vitrine sous Next.js à partir de maquettes
-                Figma, améliorant la clarté de l'offre et l'engagement
-                utilisateur.
+                Réalisation d&apos;un site vitrine sous Next.js à partir de
+                maquettes Figma, améliorant la clarté de l&apos;offre et
+                l&apos;engagement utilisateur.
               </li>
               <li>
                 Pilotage de projets web de bout en bout (UX/UI → développement →
@@ -50,9 +51,9 @@ export default function Experiences() {
             </div>
             <ul className="list-disc list-inside">
               <li>
-                Développement d'une application interne RSE (Angular, NestJS,
-                MySQL) facilitant les dons de congés à des associations,
-                améliorant l'engagement des collaborateurs.
+                Développement d&apos;une application interne RSE (Angular,
+                NestJS, MySQL) facilitant les dons de congés à des associations,
+                améliorant l&apos;engagement des collaborateurs.
               </li>
               <li>
                 Participation à la refonte du site web avec Astro et Strapi,
@@ -64,8 +65,8 @@ export default function Experiences() {
                 performance, la scalabilité et la maintenabilité du code.
               </li>
               <li>
-                Implémentation d'une authentification sécurisée via JSON Web
-                Tokens, renforçant la protection des données utilisateurs.
+                Implémentation d&apos;une authentification sécurisée via JSON
+                Web Tokens, renforçant la protection des données utilisateurs.
               </li>
               <li>
                 Correction des bugs critiques et refactorisation du code
@@ -73,9 +74,9 @@ export default function Experiences() {
                 stabilité globale des applications.
               </li>
               <li>
-                Réalisation d'une veille technique sur les technologies 3D web
-                (BabylonJS), contribuant à l'innovation sur les projets
-                immersifs de l'entreprise
+                Réalisation d&apos;une veille technique sur les technologies 3D
+                web (BabylonJS), contribuant à l&apos;innovation sur les projets
+                immersifs de l&apos;entreprise
               </li>
             </ul>
           </>
@@ -86,23 +87,23 @@ export default function Experiences() {
             </div>
             <ul className="list-disc list-inside">
               <li>
-                Refonte d'un site web sous WordPress (PHP), améliorant la
+                Refonte d&apos;un site web sous WordPress (PHP), améliorant la
                 structure et la lisibilité du contenu
               </li>
               <li>
-                Développement d'une plateforme de gestion clients (VueJS,
+                Développement d&apos;une plateforme de gestion clients (VueJS,
                 NestJS, MySQL) permettant aux coachs de suivre leurs clients et
                 programmes, optimisant leur organisation quotidienne.
               </li>
               <li>
                 Analyse des solutions concurrentes pour identifier des
-                opportunités d'amélioration produit et aligner les
+                opportunités d&apos;amélioration produit et aligner les
                 fonctionnalités avec les attentes du marché.
               </li>
               <li>
                 Collaboration avec des designers UI/UX pour concevoir des
-                interfaces plus intuitives, améliorant l'expérience utilisateur
-                globale.
+                interfaces plus intuitives, améliorant l&apos;expérience
+                utilisateur globale.
               </li>
             </ul>
           </>

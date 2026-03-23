@@ -44,7 +44,7 @@ export default function Contact() {
 
       // Reset form
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         success: false,
         message:
@@ -59,10 +59,10 @@ export default function Contact() {
     <section className="py-12 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold mb-8">ME CONTACTER</h1>
 
-      <div className="flex gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
         <div className="bg-neutral-900 p-6 rounded-lg shadow-lg border border-gray-800 max-w-4xl">
           <p className="mb-6 text-gray-300">
-            Vous avez un projet en tête ou une question ? N'hésitez pas à me
+            Vous avez un projet en tête ou une question ? N&apos;hésitez pas à me
             contacter en remplissant le formulaire ci-dessous. Je vous répondrai
             dans les plus brefs délais.
           </p>
@@ -150,7 +150,7 @@ export default function Contact() {
           </form>
         </div>
 
-        <div className="text-center text-gray-400 text-sm flex flex-col items-start">
+        <div className="text-center text-gray-400 text-sm flex flex-col items-center lg:items-start">
           <p>Ou contactez-moi directement à :</p>
           <p className="mt-2">
             <a
