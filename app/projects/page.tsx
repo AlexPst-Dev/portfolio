@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Hyperion Connect",
     description:
-      "Application mobile pour la communauté sportive de l'entreprise Hyperion. Utilisée pour connecter les sportifs avec les coachs, les médecins et les partenaires et permettre à ces derniers de planifier des sessions et de partager des informations",
+      "Application mobile pour la communauté sportive de l'entreprise Hyperion. Utilisée pour connecter les sportifs avec les coachs, les médecins et les partenaires et permettre à ces derniers de planifier des sessions et de partager des informations.",
     imageUrl: "/hyperion-connect-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/hyperion-connect-frontend",
     liveUrl: "https://dev.app.hyperion-connect.com",
@@ -15,10 +15,20 @@ const projects = [
   {
     title: "TimeIt",
     description:
-      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive",
+      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive. Projet Next.js",
     imageUrl: "/timeit-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/TimeIt",
+    liveUrl: "https://timeit.alx-pst.tech",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Antigravity"],
+  },
+  {
+    title: "Landing Page - Coach Sportif",
+    description:
+      "Landing page pour le coach sportif Mael GAUDRON via Next.js, axé sur la performance du rendu et du SEO. Design réalisé sur Figma.",
+    imageUrl: "/mg-coaching-website-img.jpeg",
+    githubUrl: "https://github.com/AlexPst-Dev/MG-Coaching-Website",
+    liveUrl: "https://mg-coaching.alx-pst.tech",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Figma", "SEO"],
   },
 ];
 
