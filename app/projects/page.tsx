@@ -45,7 +45,7 @@ export default function Projects() {
   return (
     <section
       aria-label="Liste des projets"
-      className="min-h-screen bg-black text-white py-8 md:py-0"
+      className="min-h-screen text-white py-8 md:py-0"
     >
       <header className="mb-4">
         <h1 className="text-4xl font-bold mb-2">PROJETS</h1>

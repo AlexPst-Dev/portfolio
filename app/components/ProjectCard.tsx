@@ -20,7 +20,7 @@ export default function ProjectCard({
   tags = [],
 }: ProjectCardProps) {
   return (
-    <article className="border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600 hover:shadow-lg hover:shadow-gray-900/50">
+    <article className="bg-black border border-gray-800 rounded-lg overflow-hidden transition-all duration-300 hover:border-gray-600 hover:shadow-lg hover:shadow-gray-900/50">
       <div className="relative h-64 w-full">
         <Image
           src={imageUrl}

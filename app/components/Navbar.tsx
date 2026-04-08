@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -10,9 +11,18 @@ export default function Navbar() {
       aria-label="Navigation principale"
       className="flex w-full justify-between py-8 px-4 md:px-10 lg:px-32 sticky top-0 z-50 bg-neutral-900/20 backdrop-blur-md border-b border-neutral-800"
     >
-      <a className="hover:underline self-center" href="./">
-        Alexandre Proust
-      </a>
+      <div className="flex items-center gap-2">
+        <Image
+          src="/logo-portfolio.svg"
+          alt="logo du portfolio"
+          loading="eager"
+          width={32}
+          height={32}
+        />
+        <a className="hover:underline self-center" href="./">
+          Alexandre Proust
+        </a>
+      </div>
 
       {/* Desktop menu (keep your current layout) */}
       <ul className="hidden md:flex gap-8 list-none items-center">

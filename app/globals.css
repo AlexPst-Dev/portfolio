@@ -6,9 +6,38 @@ body {
   background-color: black;
   color: white;
 }
+/* Sunset glow — bottom-right radial ambiance */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -25%;
+  right: -10%;
+  width: 65vw;
+  height: 65vw;
+  background: radial-gradient(
+    ellipse at center,
+    #ff6a00 0%,
+    #ee4e00 20%,
+    #c2340a 40%,
+    #7a1a0a 65%,
+    transparent 100%
+  );
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+}
 
 main {
   padding-inline: 8rem;
+}
+
+main,
+nav,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 p,

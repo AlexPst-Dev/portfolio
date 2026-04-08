@@ -16,30 +16,36 @@ export default function Home() {
       aria-label="Presentation du developpeur"
       className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center"
     >
-      <header id="leftPart" className="w-full md:w-[54%]">
-        <div id="titles">
+      <header id="leftPart" className="w-full md:w-[60%]">
+        <div className="flex flex-col gap-2">
+          <div className="text-amber-700 px-2 py-1 rounded-md bg-amber-100 w-fit border-t border-l border-b-4 border-r-4 border-amber-700 cursor-pointer">
+            <a href="/contact" className="hover:underline">
+              Disponible — Freelance & CDI
+            </a>
+          </div>
           <h1 className="leading-none">Alexandre PROUST</h1>
-          <h2>Développeur & Designer Web Freelance</h2>
-          <h3>NextJS | React Native | Figma</h3>
+          <h2 className="leading-none">
+            Développeur <br /> Fullstack · UI/UX
+          </h2>
+          <h3>Next.js · React Native · Figma</h3>
         </div>
         <p className="mt-2">
-          {`Développeur Front-End freelance, je conçois des sites et MVP web, du
-          design à la mise en production. J'utilise Figma pour l'UX/UI et NextJS pour le développement. Je collabore
-          avec des PME sur des projets web et reste ouvert à des opportunités
-          salariées.`}
+          Je conçois des sites web et MVP de A à Z — du design Figma à la mise
+          en production Next.js. Ouvert aux missions freelance comme aux
+          opportunités en CDI.
         </p>
       </header>
 
-      <div className="rightPart flex justify-center w-full md:w-[46%]">
+      <div className="rightPart flex justify-center w-full md:w-[40%]">
         <Image
-          src="/pp-alexandre-proust-website.png"
+          src="/alexandre-proust-image.png"
           alt="Portrait professionnel d'Alexandre PROUST en fond sombre"
           width={500}
           height={500}
           priority
           placeholder="blur"
           blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiMyMjIyMjIiLz48L3N2Zz4="
-          className="object-contain max-w-full h-auto"
+          className="object-contain max-w-full h-auto border-amber-700 border-b-4 border-r-4 rounded-b-sm"
         />
       </div>
     </section>
