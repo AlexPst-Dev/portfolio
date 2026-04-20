@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <section
       aria-label="Presentation du developpeur"
-      className="min-h-screen flex flex-col-reverse md:flex-row justify-between items-center"
+      className="gap-8 md:gap-0 min-h-fit md:min-h-screen flex flex-col-reverse md:flex-row justify-between items-center"
     >
       <header id="leftPart" className="w-full md:w-[60%]">
         <div className="flex flex-col gap-2">
