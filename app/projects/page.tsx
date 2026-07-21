@@ -13,13 +13,12 @@ const projects = [
     tags: ["ReactNative", "Expo", "Express", "MySQL", "Figma"],
   },
   {
-    title: "TimeIt",
+    title: "Website - Artefacto",
     description:
-      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive. Projet Next.js",
-    imageUrl: "/timeit-img.jpg",
-    githubUrl: "https://github.com/AlexPst-Dev/TimeIt",
-    liveUrl: "https://timeit.alx-pst.tech",
-    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Antigravity"],
+      "Site vitrine réalisé pour l'entreprise ARTEFACTO en Astro et avec le headless CMS Strapi pour permettre une gestion de contenu dynamique à l'entreprise. Design réalisé sur Figma.",
+    imageUrl: "/artefacto-website.jpeg",
+    liveUrl: "https://artefacto-ar.com",
+    tags: ["Astro.js", "Strapi", "SCSS", "TypeScript", "Figma", "SEO"],
   },
   {
     title: "Landing Page - Coach Sportif",
@@ -29,6 +28,15 @@ const projects = [
     githubUrl: "https://github.com/AlexPst-Dev/MG-Coaching-Website",
     liveUrl: "https://mg-coaching.alx-pst.tech",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Figma", "SEO"],
+  },
+  {
+    title: "TimeIt",
+    description:
+      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive. Projet Next.js",
+    imageUrl: "/timeit-img.jpg",
+    githubUrl: "https://github.com/AlexPst-Dev/TimeIt",
+    liveUrl: "https://timeit.alx-pst.tech",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Antigravity"],
   },
 ];
 

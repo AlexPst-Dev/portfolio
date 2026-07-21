@@ -6,7 +6,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   imageUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   tags?: string[];
 }
@@ -51,17 +51,20 @@ export default function ProjectCard({
         )}
 
         <div className="flex items-center gap-4">
-          <Link
-            href={githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-            aria-label={`Voir le code du projet ${title} sur GitHub`}
-          >
-            <FaGithub className="w-5 h-5" />
-            <span>Code</span>
-          </Link>
-
+        {
+          githubUrl && (
+            <Link
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                aria-label={`Voir le code du projet ${title} sur GitHub`}
+              >
+                <FaGithub className="w-5 h-5" />
+                <span>Code</span>
+              </Link>
+          )
+        }
           {liveUrl && (
             <Link
               href={liveUrl}
