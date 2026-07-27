@@ -65,7 +65,7 @@ export default function ContactContent() {
       <div className="flex flex-col lg:flex-row gap-8">
         <section
           aria-label="Formulaire de contact"
-          className="bg-neutral-900 p-6 rounded-lg shadow-lg border border-gray-800 max-w-4xl"
+          className="bg-neutral-900 p-4 rounded-lg shadow-lg border border-gray-800 max-w-4xl"
         >
           <p className="mb-6 text-gray-300">
             Vous avez un projet en tete ou une question ? N&apos;hesitez pas a

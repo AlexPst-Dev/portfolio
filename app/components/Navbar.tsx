@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Navigation principale"
-      className="flex w-full justify-between py-8 px-4 md:px-10 lg:px-32 sticky top-0 z-50 bg-neutral-900/20 backdrop-blur-md border-b border-neutral-800"
+      className="flex w-full justify-between py-8 px-4 md:px-10 lg:px-32 sticky top-0 z-50 bg-neutral-900/20 backdrop-blur-md border-b border-neutral-800 relative"
     >
       <div className="flex items-center gap-2">
         <Image
@@ -63,7 +63,7 @@ export default function Navbar() {
       <div
         id="mobile-navigation-menu"
         className={[
-          "md:hidden absolute right-0 top-full mt-2",
+          "md:hidden fixed right-0 top-[72px] z-[9999]",
           "w-56 rounded-md border border-neutral-800",
           "bg-neutral-900/95 backdrop-blur-md",
           "transform transition-all duration-300 ease-out",

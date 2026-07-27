@@ -37,7 +37,6 @@ main,
 nav,
 footer {
   position: relative;
-  z-index: 1;
 }
 
 p,
