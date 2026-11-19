@@ -3,8 +3,7 @@
  * This file generates robots.txt with permissive crawl rules and sitemap reference.
  */
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.portfolio.alx-pst.tech";
+import { SITE_URL as BASE_URL } from "@/app/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {

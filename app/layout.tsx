@@ -1,16 +1,24 @@
 import type { Metadata } from "next";
+import { Chivo } from "next/font/google";
 import JsonLd from "@/app/components/JsonLd";
 import Navbar from "./components/Navbar";
+import { SITE_URL } from "@/app/lib/site";
 import "./globals.css";
 
+const chivo = Chivo({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-chivo",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.portfolio.alx-pst.tech"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Alexandre PROUST | Développeur & Designer Web Freelance",
     template: "%s | Alexandre PROUST",
   },
   description:
-    "Alexandre PROUST est développeur et designer web freelance à Rennes. Il conçoit des applications Next.js, React Native et des interfaces UI/UX sur Figma.",
+    "Alexandre PROUST est développeur et designer web freelance à Rennes. Il conçoit des applications web et mobiles en TypeScript (React, Next.js, React Native, Node.js) et leurs interfaces sur Figma.",
   alternates: {
     canonical: "/",
   },
@@ -31,7 +39,7 @@ export const metadata: Metadata = {
       "Portfolio professionnel d'Alexandre PROUST: projets web, expérience et contact.",
     images: [
       {
-        url: "https://www.portfolio.alx-pst.tech/og-image.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Aperçu du portfolio d'Alexandre PROUST",
@@ -50,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={chivo.variable}>
       <body>
         <JsonLd />
         <Navbar />

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience",
+  title: "Expériences",
   description:
-    "Parcours professionnel et formations d'Alexandre PROUST, avec les technologies maitrisees en contexte projet.",
+    "Parcours professionnel et formations d'Alexandre PROUST, avec les technologies maîtrisées en contexte projet.",
   alternates: {
     canonical: "/experiences",
   },
@@ -13,7 +13,7 @@ export default function Experiences() {
   return (
     <div className="flex flex-col w-full gap-8 py-8 md:pt-0 md:pb-8">
       <header>
-        <h1>EXPERIENCES</h1>
+        <h1>EXPÉRIENCES</h1>
       </header>
       {/** Experiences */}
       <section aria-label="Parcours professionnel" className="flex flex-col">
@@ -90,7 +90,7 @@ export default function Experiences() {
               <li>
                 Réalisation d&apos;une veille technique sur les technologies 3D
                 web (BabylonJS), contribuant à l&apos;innovation sur les projets
-                immersifs de l&apos;entreprise
+                immersifs de l&apos;entreprise.
               </li>
             </ul>
           </article>
@@ -102,7 +102,7 @@ export default function Experiences() {
             <ul className="list-disc list-inside">
               <li>
                 Refonte d&apos;un site web sous WordPress (PHP), améliorant la
-                structure et la lisibilité du contenu
+                structure et la lisibilité du contenu.
               </li>
               <li>
                 Développement d&apos;une plateforme de gestion clients (VueJS,
@@ -125,7 +125,7 @@ export default function Experiences() {
       </section>
       {/** Diplomes */}
       <section className="flex flex-col gap-4">
-        <h2>DIPLOMES</h2>
+        <h2>DIPLÔMES</h2>
         <div className="flex flex-col gap-2">
           <h3>Mastère Développeur Fullstack — Sup De Vinci</h3>
           <p>09/2022 - 09/2024 | Rennes </p>

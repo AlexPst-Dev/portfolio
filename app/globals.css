@@ -1,14 +1,16 @@
 @import "tailwindcss";
-@import "./fonts.css";
 
 body {
-  font-family: "Chivo", Arial, sans-serif;
+  font-family: var(--font-chivo), Arial, sans-serif;
   background-color: black;
   color: white;
+  /* Own stacking context so the glow below can sit behind all content */
+  isolation: isolate;
 }
 
+/* `clip` (not `hidden`) so body doesn't become a scroll container, which would break the sticky navbar */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -31,7 +33,8 @@ body::after {
   filter: blur(80px);
   opacity: 0.35;
   pointer-events: none;
-  z-index: 0;
+  /* Behind every element of the page, never over the text */
+  z-index: -1;
   border-radius: 50%;
 }
 
@@ -40,7 +43,6 @@ main {
 }
 
 main,
-nav,
 footer {
   position: relative;
 }
@@ -57,7 +59,7 @@ h1 {
 }
 h2 {
   font-size: 3.75rem;
-  font-weight: semi-bold;
+  font-weight: 600;
 }
 h3 {
   font-size: 2.25rem;

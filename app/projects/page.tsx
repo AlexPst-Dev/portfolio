@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ProjectCard from "@/app/components/ProjectCard";
 
-// Example projects data - replace with your actual projects
 const projects = [
   {
     title: "Hyperion Connect",
@@ -9,7 +8,7 @@ const projects = [
       "Application mobile pour la communauté sportive de l'entreprise Hyperion. Utilisée pour connecter les sportifs avec les coachs, les médecins et les partenaires et permettre à ces derniers de planifier des sessions et de partager des informations.",
     imageUrl: "/hyperion-connect-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/hyperion-connect-frontend",
-    liveUrl: "https://dev.app.hyperion-connect.com",
+    liveUrl: "https://hyperion-connect.com",
     tags: ["ReactNative", "Expo", "Express", "MySQL", "Figma"],
   },
   {
@@ -23,16 +22,15 @@ const projects = [
   {
     title: "Landing Page - Coach Sportif",
     description:
-      "Landing page pour le coach sportif Mael GAUDRON via Next.js, axé sur la performance du rendu et du SEO. Design réalisé sur Figma.",
+      "Landing page en Next.js pour le coach sportif Maël GAUDRON, axée sur la performance du rendu et du SEO. Design réalisé sur Figma.",
     imageUrl: "/mg-coaching-website-img.jpeg",
-    githubUrl: "https://github.com/AlexPst-Dev/MG-Coaching-Website",
     liveUrl: "https://mg-coaching.alx-pst.tech",
     tags: ["Next.js", "Tailwind CSS", "TypeScript", "Figma", "SEO"],
   },
   {
     title: "TimeIt",
     description:
-      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive. Projet Next.js",
+      "Application web entièrement codée avec l'IDE Antigravity de Google. Utilisée pour définir les temps d'activité sportive. Projet Next.js.",
     imageUrl: "/timeit-img.jpg",
     githubUrl: "https://github.com/AlexPst-Dev/TimeIt",
     liveUrl: "https://timeit.alx-pst.tech",
@@ -43,7 +41,7 @@ const projects = [
 export const metadata: Metadata = {
   title: "Projets",
   description:
-    "Explorez les projets d'Alexandre PROUST: applications React Native, sites Next.js, APIs REST et integrations full-stack.",
+    "Explorez les projets d'Alexandre PROUST: applications React Native, sites Next.js, API REST et intégrations full-stack.",
   alternates: {
     canonical: "/projects",
   },
@@ -66,9 +64,9 @@ export default function Projects() {
         aria-label="Cartes de projets"
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <ProjectCard
-            key={index}
+            key={project.title}
             title={project.title}
             description={project.description}
             imageUrl={project.imageUrl}

@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Alexandre PROUST
 
-## Getting Started
+Portfolio de développeur fullstack TypeScript, en ligne sur <https://portfolio.alx-pst.tech>.
 
-First, run the development server:
+Stack : Next.js (App Router), React 19, Tailwind CSS 4, déployé en conteneur Docker (`output: "standalone"`).
+
+## Développement
 
 ```bash
+npm install
+cp .env.example .env.local   # puis renseigner les variables
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site tourne sur <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables d'environnement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Le formulaire de contact (`app/contact/actions.ts`) envoie les messages via [Resend](https://resend.com).
 
-## Learn More
+| Variable | Rôle |
+| --- | --- |
+| `RESEND_API_KEY` | Clé API Resend |
+| `CONTACT_TO_EMAIL` | Adresse qui reçoit les messages |
+| `CONTACT_FROM_EMAIL` | Expéditeur, sur un domaine vérifié dans Resend |
 
-To learn more about Next.js, take a look at the following resources:
+Sans `RESEND_API_KEY` ni `CONTACT_TO_EMAIL`, le formulaire affiche une erreur et renvoie vers l'adresse email directe : il ne prétend jamais avoir envoyé un message.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+docker build -t portfolio .
+docker run -p 3000:3000 --env-file .env.production portfolio
+```

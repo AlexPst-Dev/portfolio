@@ -24,7 +24,7 @@ export default function ProjectCard({
       <div className="relative h-64 w-full">
         <Image
           src={imageUrl}
-          alt={`Capture d'ecran du projet ${title}`}
+          alt={`Capture d'écran du projet ${title}`}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -71,10 +71,10 @@ export default function ProjectCard({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-              aria-label={`Voir la demo en ligne du projet ${title}`}
+              aria-label={`Voir la démo en ligne du projet ${title}`}
             >
               <FaExternalLinkAlt className="w-4 h-4" />
-              <span>Live Demo</span>
+              <span>Voir le site</span>
             </Link>
           )}
         </div>

@@ -4,7 +4,7 @@ import ContactContent from "./ContactContent";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Alexandre PROUST pour collaborer sur vos projets web. Disponible pour missions freelance et opportunites professionnelles.",
+    "Contactez Alexandre PROUST pour collaborer sur vos projets web. Disponible pour missions freelance et opportunités professionnelles.",
   alternates: {
     canonical: "/contact",
   },

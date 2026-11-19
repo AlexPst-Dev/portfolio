@@ -3,8 +3,7 @@
  * This file defines the XML sitemap entries using Next.js MetadataRoute.
  */
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://www.portfolio.alx-pst.tech";
+import { SITE_URL as BASE_URL } from "@/app/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -2,12 +2,14 @@
  * SEO note:
  * This component injects Person JSON-LD structured data for richer search snippets.
  */
+import { SITE_URL } from "@/app/lib/site";
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Alexandre PROUST",
-  url: "https://www.portfolio.alx-pst.tech",
-  jobTitle: "Developpeur et Designer Web Freelance",
+  url: SITE_URL,
+  jobTitle: "Développeur Fullstack TypeScript Freelance",
   sameAs: [
     "https://github.com/AlexPst-Dev",
     "https://www.linkedin.com/in/alexandre-proust-48437919b/",
@@ -21,6 +23,7 @@ const personJsonLd = {
     "JavaScript",
     "Tailwind CSS",
     "Figma",
+    "Node.js",
     "Express.js",
     "NestJS",
     "MySQL",
