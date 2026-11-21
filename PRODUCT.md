@@ -50,7 +50,7 @@ Offers to put forward:
 
 ## Evidence on Hand
 
-- Portrait: `public/alexandre-proust-image.png` (700×700).
+- Portrait: none on the site for now (the old one was removed from `public/`; it is in git history).
 - Projects (screenshots in `public/`): Hyperion Connect (React Native/Expo, Express, MySQL, Figma), Artefacto website (Astro, Strapi), MG Coaching landing page (Next.js), TimeIt (Next.js, built entirely with an AI IDE).
 - Experience: freelance since 02/2025; Artefacto full-stack developer 09/2022–09/2024 (Angular, NestJS, Astro/Strapi, PHP→NestJS migration, BabylonJS watch); Lioncoach full-stack 09/2021–09/2022 (VueJS, NestJS, WordPress).
 - Degrees: Mastère Développeur Fullstack and Bachelor Développeur Web (Sup De Vinci), BTS SIO.
