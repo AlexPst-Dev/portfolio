@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Chivo } from "next/font/google";
 import JsonLd from "@/app/components/JsonLd";
-import Navbar from "./components/Navbar";
 import { SITE_URL } from "@/app/lib/site";
 import "./globals.css";
 
@@ -61,13 +60,7 @@ export default function RootLayout({
     <html lang="fr" className={chivo.variable}>
       <body>
         <JsonLd />
-        <Navbar />
-        <main>{children}</main>
-        <footer className="px-4 md:px-10 lg:px-32 py-8 text-sm text-gray-400">
-          <p>
-            © {new Date().getFullYear()} Alexandre PROUST. Tous droits réservés.
-          </p>
-        </footer>
+        {children}
       </body>
     </html>
   );

@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* Brand tokens shared by the current site and the test-ui proposals */
+@theme {
+  --color-ink: #0a0806;
+  --color-ink-2: #14110e;
+  --color-ink-3: #1f1a16;
+  --color-bone: #f5efe8;
+  --color-ash: #a89e94;
+  /* Brand orange from the logo, for large shapes and fields */
+  --color-ember: #bb4d00;
+  /* Brighter orange for text and small marks on black (7:1 on --color-ink) */
+  --color-flame: #ff6a13;
+  --color-flame-soft: #ffb27a;
+}
+
 body {
   font-family: var(--font-chivo), Arial, sans-serif;
   background-color: black;
@@ -8,14 +22,34 @@ body {
   isolation: isolate;
 }
 
-/* `clip` (not `hidden`) so body doesn't become a scroll container, which would break the sticky navbar */
-html, body {
+/* `clip` (not `hidden`) so body doesn't become a scroll container, which would break sticky elements */
+html,
+body {
   overflow-x: clip;
   max-width: 100%;
 }
 
+/* Browser surfaces carry the brand too (in the base layer so utilities can override them) */
+@layer base {
+  ::selection {
+    background: var(--color-flame);
+    color: var(--color-ink);
+  }
+  html {
+    caret-color: var(--color-flame);
+    scrollbar-color: #3a322b var(--color-ink);
+    accent-color: var(--color-flame);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-flame);
+    outline-offset: 3px;
+  }
+}
+
+/* ───────────── Current site (pre-redesign pages, under app/(site)) ───────────── */
+
 /* Sunset glow — bottom-right radial ambiance */
-body::after {
+body:has(.site-shell)::after {
   content: "";
   position: fixed;
   bottom: -25%;
@@ -38,53 +72,133 @@ body::after {
   border-radius: 50%;
 }
 
-main {
+.site-main {
   padding-inline: 8rem;
 }
 
-main,
-footer {
+.site-main,
+.site-shell footer {
   position: relative;
 }
 
-p,
-a,
-li {
+.site-shell p,
+.site-shell a,
+.site-shell li {
   font-size: 1.25rem;
 }
 
-h1 {
+.site-shell h1 {
   font-size: 6rem;
   font-weight: bold;
 }
-h2 {
+.site-shell h2 {
   font-size: 3.75rem;
   font-weight: 600;
 }
-h3 {
+.site-shell h3 {
   font-size: 2.25rem;
 }
 
 @media (width <= 64rem) {
-  main {
+  .site-main {
     padding-inline: 2.5rem;
   }
 }
 
 @media (width <= 48rem) {
-  main {
+  .site-main {
     padding-inline: 1rem;
   }
-  h1 {
+  .site-shell h1 {
     font-size: 2.25rem;
   }
-  h2,
-  h3 {
+  .site-shell h2,
+  .site-shell h3 {
     font-size: 1.5rem;
   }
-  p,
-  a,
-  li {
+  .site-shell p,
+  .site-shell a,
+  .site-shell li {
     font-size: 1rem;
+  }
+}
+
+/* ───────────── test-ui lab ───────────── */
+
+:root {
+  --lab-h: 44px;
+}
+
+/* Animated icons (lucide, thick round stroke): parts move when their trigger is hovered */
+.icon-draw path,
+.icon-draw line,
+.icon-draw polyline,
+.icon-draw circle,
+.icon-draw rect {
+  stroke-dasharray: 64;
+  stroke-dashoffset: 0;
+}
+:is(a, button, [data-icon-trigger]):hover .icon-draw :is(path, line, polyline, circle, rect),
+:is(a, button, [data-icon-trigger]):focus-visible .icon-draw :is(path, line, polyline, circle, rect) {
+  animation: icon-draw 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes icon-draw {
+  from {
+    stroke-dashoffset: 64;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+:is(a, button, [data-icon-trigger]):hover .icon-nudge {
+  transform: translateX(3px);
+}
+.icon-nudge {
+  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+:is(a, button, [data-icon-trigger]):hover .icon-spin {
+  transform: rotate(90deg);
+}
+.icon-spin {
+  transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Conversation (02): typing dots rise and brighten in turn */
+@keyframes cv-typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* Fusion (1.3): name letters light up from hairline to bold */
+@keyframes fx-ignite {
+  from {
+    font-weight: 200;
+    opacity: 0.2;
+  }
+}
+
+/* Index (05): kinetic name letters open from condensed */
+@keyframes ix-open {
+  from {
+    font-stretch: 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
   }
 }
