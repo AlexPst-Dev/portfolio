@@ -1,67 +1,41 @@
-import type { Metadata } from "next";
-import { Chivo } from "next/font/google";
-import JsonLd from "@/app/components/JsonLd";
-import { SITE_URL } from "@/app/lib/site";
+import type { Metadata, Viewport } from "next";
+import { fontVariables } from "@/app/fonts";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/app/lib/site";
 import "./globals.css";
-
-const chivo = Chivo({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-chivo",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Alexandre PROUST | Développeur & Designer Web Freelance",
-    template: "%s | Alexandre PROUST",
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Alexandre PROUST est développeur et designer web freelance à Rennes. Il conçoit des applications web et mobiles en TypeScript (React, Next.js, React Native, Node.js) et leurs interfaces sur Figma.",
-  alternates: {
-    canonical: "/",
-  },
-  authors: [{ name: "Alexandre PROUST" }],
-  creator: "Alexandre PROUST",
-  other: {
-    "profile:linkedin":
-      "https://www.linkedin.com/in/alexandre-proust-48437919b/",
-    "profile:github": "https://github.com/AlexPst-Dev",
-  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "/",
-    siteName: "Portfolio Alexandre PROUST",
-    title: "Alexandre PROUST | Développeur & Designer Web Freelance",
-    description:
-      "Portfolio professionnel d'Alexandre PROUST: projets web, expérience et contact.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Aperçu du portfolio d'Alexandre PROUST",
-      },
-    ],
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
-  robots: {
-    index: true,
-    follow: true,
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#0a0806",
+  colorScheme: "dark",
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr" className={chivo.variable}>
-      <body>
-        <JsonLd />
-        {children}
-      </body>
+    <html lang="fr" className={fontVariables}>
+      <body>{children}</body>
     </html>
   );
 }

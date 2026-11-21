@@ -1,4 +1,4 @@
-import type { Project } from "../content";
+import type { Project } from "@/app/lib/content";
 
 /**
  * Scripted knowledge of the test-ui assistant. Answers are written in advance
@@ -129,7 +129,7 @@ export const intents: Intent[] = [
     id: "who",
     question: "Tu es une vraie IA ?",
     keywords: ["vraie", "robot", "humain", "qui es", "tu es", "bot", "gpt", "modele", "reel"],
-    text: "Pas encore. Dans cette maquette, mes réponses ont été rédigées à l'avance à partir du parcours d'Alexandre. La version finale sera branchée sur un vrai modèle, avec ses garde-fous.",
+    text: "Pas encore. Pour l'instant, mes réponses ont été rédigées à l'avance à partir du parcours d'Alexandre. La version finale sera branchée sur un vrai modèle, avec ses garde-fous.",
     followUps: ["site", "contact"],
   },
   {
@@ -146,7 +146,7 @@ export const fallback: Intent = {
   id: "fallback",
   question: "",
   keywords: [],
-  text: "Je n'ai pas de réponse rédigée pour cette question : dans cette maquette, je ne connais que ce qu'Alexandre a écrit à l'avance. Essayez une des questions ci-dessous, ou écrivez-lui directement.",
+  text: "Je n'ai pas de réponse rédigée pour cette question : pour l'instant, je ne connais que ce qu'Alexandre a écrit à l'avance. Essayez une des questions ci-dessous, ou écrivez-lui directement.",
   followUps: ["offers", "projects", "contact"],
 };
 

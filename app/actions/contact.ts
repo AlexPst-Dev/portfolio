@@ -6,6 +6,8 @@ export type ContactState = {
   fieldErrors?: Partial<Record<"name" | "email" | "message", string>>;
   /** Echoed back on error so React's automatic form reset doesn't wipe the input. */
   values?: { name: string; email: string; message: string };
+  /** Counts submissions, so the form can remount its fields after each one */
+  attempt?: number;
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,16 +21,19 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
-export async function sendContactMessage(
-  _prev: ContactState,
-  formData: FormData,
-): Promise<ContactState> {
+export async function sendContactMessage(prev: ContactState, formData: FormData): Promise<ContactState> {
+  const attempt = (prev.attempt ?? 0) + 1;
+  return { ...(await handle(formData)), attempt };
+}
+
+async function handle(formData: FormData): Promise<ContactState> {
   // Honeypot: real visitors never see nor fill this field.
   if (String(formData.get("company") ?? "").trim() !== "") {
     return { status: "success", message: "Merci, votre message a bien été envoyé." };
   }
 
-  const name = String(formData.get("name") ?? "").trim();
+  // One line only: the name ends up in the email subject
+  const name = String(formData.get("name") ?? "").replace(/\s+/g, " ").trim();
   const email = String(formData.get("email") ?? "").trim();
   const message = String(formData.get("message") ?? "").trim();
 

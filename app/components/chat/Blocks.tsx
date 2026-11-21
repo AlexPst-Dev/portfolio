@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { experience, method, offers, profile, projects, stack } from "../content";
-import type { Block } from "./knowledge";
-import type { ChatMessage } from "./useScriptedChat";
+import { experience, method, offers, profile, projects, stack } from "@/app/lib/content";
+import type { Block } from "@/app/lib/chat/knowledge";
+import type { ChatMessage } from "@/app/lib/chat/useScriptedChat";
 
 /*
  * Rich answer blocks. Styled only through CSS variables set by each proposal:
@@ -164,7 +164,7 @@ export function ContactBlock() {
  * The visible thread carries no live region.
  */
 export function ChatAnnouncer({ messages }: { messages: ChatMessage[] }) {
-  const last = [...messages].reverse().find((m) => m.role === "assistant" && m.done);
+  const last = messages.findLast((m) => m.role === "assistant" && m.done);
   return (
     <div className="sr-only" aria-live="polite" aria-atomic="true">
       {last ? last.text : ""}

@@ -1,5 +1,5 @@
 /**
- * Shared content for the five test-ui landing proposals.
+ * Content of the home page and of the spark's answers.
  * Every fact comes from the current site (projects, experiences) or PRODUCT.md.
  * No metrics, testimonials or client logos: none exist yet.
  */
@@ -21,7 +21,6 @@ export const profile = {
   email: "alexandre-proust.dev@proton.me",
   github: "https://github.com/AlexPst-Dev",
   linkedin: "https://www.linkedin.com/in/alexandre-proust-48437919b/",
-  portrait: "/alexandre-proust-image.png",
 };
 
 export type Offer = {
@@ -190,6 +189,3 @@ export const stack = {
   "IA & livraison": ["Claude Code", "Agents de code", "Docker", "CI/CD"],
 };
 
-/** This very site is a proof: say it once, factually. */
-export const thisSite =
-  "Ce site a été refait avec Claude Code : cinq directions construites et comparées, puis une retenue.";

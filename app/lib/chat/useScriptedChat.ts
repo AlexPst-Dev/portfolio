@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { useReducedMotion } from "motion/react";
+import { useReducedMotion } from "@/app/lib/useReducedMotion";
 import {
   type Block,
   type Intent,
