@@ -7,13 +7,13 @@ import { display, h2, mono, wrap } from "./styles";
 // Long titles break per word from the start, so the bolder hover weight never adds a line
 const titleLines = (title: string) => (title.length > 12 ? title.split(" ") : [title]);
 
-/** Shipped projects as rows; the screenshot opens on hover. */
+/** Delivered projects as rows; the screenshot opens on hover. */
 export default function Projects() {
   return (
     <section id="projets" aria-labelledby="projets-titre" className="border-t border-white/10">
       <div className={`${wrap} py-24`}>
         <h2 id="projets-titre" className={h2}>
-          Déjà en production
+          Projets livrés
         </h2>
         <ul className="mt-12 border-t border-white/15">
           {projects.map((p) => {

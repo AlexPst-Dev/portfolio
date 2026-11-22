@@ -129,13 +129,12 @@ export const projects: Project[] = [
     id: "hyperion",
     title: "Hyperion Connect",
     context: "Freelance",
-    kind: "Application mobile",
+    kind: "Application mobile et web",
     role: "Conception et développement fullstack",
     summary:
-      "Une PWA qui met en relation sportifs, coachs, médecins et partenaires : comptes, événements, programmes et partage d'informations.",
-    stack: ["React Native", "Expo", "Express", "MySQL", "Figma"],
+      "Une app qui met en relation sportifs, coachs, médecins et partenaires, avec un espace par rôle : séances, objectifs, suivi de progression, fichiers. Livrée au client, jamais lancée : l'entreprise a fermé avant la sortie.",
+    stack: ["React Native", "Expo", "Express", "TypeORM", "MySQL", "Figma"],
     image: "/hyperion-connect-img.jpg",
-    liveUrl: "https://hyperion-connect.com",
     githubUrl: "https://github.com/AlexPst-Dev/hyperion-connect-frontend",
   },
   {
