@@ -7,9 +7,9 @@ Stack : Next.js (App Router), React 19, Tailwind CSS 4, déployé en conteneur D
 ## Développement
 
 ```bash
-npm install
+bun install
 cp .env.example .env.local   # puis renseigner les variables
-npm run dev
+bun dev
 ```
 
 Le site tourne sur <http://localhost:3000>.
