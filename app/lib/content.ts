@@ -96,7 +96,7 @@ export const method: Step[] = [
 ];
 
 export type Project = {
-  id: "hyperion" | "artefacto" | "mgcoaching" | "timeit";
+  id: "marcellie" | "hyperion" | "artefacto" | "mgcoaching" | "timeit";
   title: string;
   context: string;
   kind: string;
@@ -111,6 +111,20 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "marcellie",
+    title: "Les Ailes de Marcellie",
+    context: "Freelance",
+    kind: "Site e-commerce",
+    role: "Design, développement et mise en production avec Claude Code",
+    summary:
+      "La boutique en ligne d'une créatrice de couture. Elle gère son catalogue seule dans Airtable, ses clients paient par carte via SumUp, le stock se met à jour à chaque vente et la confirmation part par e-mail toute seule.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Airtable", "SumUp", "Docker", "Claude Code"],
+    image: "/les-ailes-de-marcellie-website.jpeg",
+    // Staging copy kept for the portfolio (branch dev); the client's live shop is lesailesdemarcellie.com
+    liveUrl: "https://lesailesdemarcellie.alx-pst.tech",
+    ai: "Codé avec Claude Code",
+  },
   {
     id: "hyperion",
     title: "Hyperion Connect",
