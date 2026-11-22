@@ -68,7 +68,7 @@ export default function Projects() {
                           rel="noopener"
                           className="inline-flex min-h-11 items-center gap-1 font-semibold text-flame underline-offset-4 hover:underline"
                         >
-                          Voir le site <span className="sr-only">{p.title} (nouvel onglet)</span>
+                          {p.liveLabel ?? "Voir le site"} <span className="sr-only">{p.title} (nouvel onglet)</span>
                           <ArrowUpRight size={16} strokeWidth={2.25} className="icon-nudge" aria-hidden />
                         </a>
                       )}

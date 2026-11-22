@@ -59,7 +59,7 @@ export function ProjectsBlock({ ids }: { ids?: string[] }) {
                 rel="noopener noreferrer"
                 className="mt-1 inline-flex w-fit items-center gap-1 text-sm font-medium text-[var(--b-accent)] underline-offset-4 hover:underline"
               >
-                Voir le site
+                {p.liveLabel ?? "Voir le site"}
                 <ArrowUpRight size={15} strokeWidth={2.25} className="icon-nudge" aria-hidden />
                 <span className="sr-only">(nouvel onglet)</span>
               </a>

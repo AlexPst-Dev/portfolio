@@ -105,6 +105,8 @@ export type Project = {
   stack: string[];
   image: string;
   liveUrl?: string;
+  /** Link text for liveUrl, "Voir le site" by default */
+  liveLabel?: string;
   githubUrl?: string;
   /** Built with or around AI */
   ai?: string;
@@ -132,9 +134,12 @@ export const projects: Project[] = [
     kind: "Application mobile et web",
     role: "Conception et développement fullstack",
     summary:
-      "Une app qui met en relation sportifs, coachs, médecins et partenaires, avec un espace par rôle : séances, objectifs, suivi de progression, fichiers. Livrée au client, jamais lancée : l'entreprise a fermé avant la sortie.",
+      "Une app qui met en relation sportifs, coachs, médecins et partenaires, avec un espace par rôle : séances, objectifs, suivi de progression, fichiers. Livrée au client, jamais lancée : l'entreprise a fermé avant la sortie. Republiée sous le nom SportLink, avec une démo aux données fictives : un clic par rôle pour l'essayer.",
     stack: ["React Native", "Expo", "Express", "TypeORM", "MySQL", "Figma"],
     image: "/hyperion-connect-img.jpg",
+    // Public demo: fictional data, reset every night (repos hyperion-connect-*)
+    liveUrl: "https://sportlink.alx-pst.tech",
+    liveLabel: "Voir la démo",
     githubUrl: "https://github.com/AlexPst-Dev/hyperion-connect-frontend",
   },
   {

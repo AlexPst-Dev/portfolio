@@ -75,7 +75,7 @@ export const intents: Intent[] = [
     id: "hyperion",
     question: "Parle-moi d'Hyperion Connect",
     keywords: ["hyperion", "mobile", "react native", "expo", "application mobile", "sport"],
-    text: "Une app pour la communauté sportive d'Hyperion : sportifs, coachs, médecins et partenaires s'y retrouvent pour planifier des sessions et partager des informations. Alexandre l'a conçue et développée de bout en bout, avec un backend pensé pour plusieurs types d'utilisateurs. Elle a été livrée mais jamais lancée : l'entreprise cliente a fermé avant la sortie. Le code est public sur GitHub.",
+    text: "Une app pour la communauté sportive d'Hyperion : sportifs, coachs, médecins et partenaires s'y retrouvent pour planifier des sessions et partager des informations. Alexandre l'a conçue et développée de bout en bout, avec un backend pensé pour plusieurs types d'utilisateurs. Elle a été livrée mais jamais lancée : l'entreprise cliente a fermé avant la sortie. Le code est public sur GitHub, et l'app est republiée sous le nom SportLink avec une démo aux données fictives, remise à zéro chaque nuit : sportlink.alx-pst.tech.",
     blocks: [{ type: "projects", ids: ["hyperion"] }],
     followUps: ["stack", "projects"],
   },
